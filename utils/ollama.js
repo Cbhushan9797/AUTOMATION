@@ -46,7 +46,7 @@ const axios = require('axios');
 // Replace with your Gemini API key
 
 
-const GEMINI_API_KEY = 'AIzaSyDUNUHLKIguOWivFoaBnl2eUMYQUBEU2u4';
+const GEMINI_API_KEY = 
 const GEMINI_URL = 'https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent';
 async function generateScript(userRequest, context = '', knowledgeBase = '') {
   const systemPrompt = `You are an expert Playwright automation script generator. 
