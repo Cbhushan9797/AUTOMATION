@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Browser Automation App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>🤖 Browser Automation with Ollama + Playwright MCP</h1>
+    
+    <!-- Knowledge Base Section -->
+    <div class="knowledge-section">
+      <h2>📚 Knowledge Base (Optional)</h2>
+      <input type="file" id="knowledgeFile" multiple accept=".txt,.pdf,.md,.json" />
+      <div id="knowledgeList"></div>
+    </div>
+
+    <!-- Context Upload Section -->
+    <div class="context-section">
+      <h2>📋 Upload Context (Optional)</h2>
+      <input type="file" id="contextFile" multiple accept=".txt,.png,.jpg,.pdf,.json" />
+      <div id="contextList"></div>
+      
+      <label for="contextText">Or Paste Context:</label>
+      <textarea id="contextText" placeholder="Add custom requirements, website structure, credentials, etc."></textarea>
+    </div>
+
+    <!-- Automation Request Section -->
+    <div class="input-section">
+      <h2>🎯 Your Automation Request</h2>
+      <textarea id="userInput" placeholder="Describe what you want to automate...&#10;Example: Login to email, read first 3 emails, extract sender names and subjects">
+      </textarea>
+      <button id="generateBtn">🚀 Generate Script</button>
+    </div>
+
+    <!-- Generated Script Section -->
+    <div class="script-section">
+      <h2>Generated Script</h2>
+      <textarea id="scriptOutput" readonly></textarea>
+      <button id="runBtn" disabled>▶️ Run Automation</button>
+      <button id="editBtn" disabled>✏️ Edit Script</button>
+    </div>
+
+    <!-- Result Section -->
+    <div class="result-section">
+      <h2>Result</h2>
+      <div id="result"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
